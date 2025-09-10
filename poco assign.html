@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poco Mega Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    /* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #0e0d0d;
+  background-color: #fff;
+}
+
+/* Top Bar Styles */
+.top-bar {
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar .left a {
+  color: orange;
+  text-decoration: none;
+}
+
+.top-bar .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-bar .right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.top-bar select {
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  outline: none;
+}
+
+/* Header Section */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.main-header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-header .left i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.main-header input[type="text"] {
+  padding: 7px 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.main-header .icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.main-header .icons i {
+  cursor: pointer;
+}
+
+.main-header .icons span {
+  font-size: 14px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  background: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-menu a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-menu a.active {
+  color: orange;
+}
+
+.nav-menu a:hover {
+  color: orange;
+}
+
+/* Offer Badge */
+.offer-badge {
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-header .left,
+  .main-header .icons {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+}
+
+.page1{
+  text-align:left;
+  justify-content: space-between;
+  padding-top: 200px;
+  padding-left: 200px;
+  background-image: url("https://thafd.bing.com/th/id/OIP.NV9s9D6D0GSaQcC3Faz3BQHaE7?w=268&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+  color: #211c1c;
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.page2{
+  text-align:justify;
+  justify-content:space-around;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-top: 50px;
+  display: flex;
+  padding-bottom: 50px;
+
+}
+
+
+
+.button{
+    padding: 10px;
+  margin: 5px 10px;
+  background-color: orange;
+  color: black;
+  border-color: white;
+  border-radius: 6px;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+
+.end{
+  display: flex;
+  margin-left: 100px;
+  margin-right: 10px;
+  justify-content: center;
+}
+
+.end0{
+  text-align: center;
+  padding-top: 500px;
+  padding-bottom: 100px;
+}
+
+.offers{
+ padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 10px;
+
+ 
+}
+ 
+.offers .bag{
+  background-image: url("https://thafd.bing.com/th/id/OIP.1nNaN3lBIkD_da03knaF9gAAAA?w=207&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+  background-repeat: no-repeat;
+  width: 600px;
+  height:  250px;
+  border: 1px solid #eee;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: right;
+  object-fit: contain;
+  margin:0 auto;
+  background-color: #a285a2;
+ 
+ 
+}
+.offers .men{
+  background-image: url("https://thafd.bing.com/th/id/OIP.49rLEZDB-TwrWnrT1vLGMAAAAA?w=204&h=305&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  text-align:right;
+  width: 85%;
+  height: 100%;
+  object-fit: contain;
+  background-repeat:no-repeat;
+  background-color: #a285a2;
+
+}
+
+.offers .button{
+  padding: 10px;
+  margin: 5px 10px;
+  background-color: orange;
+  color: black;
+  border-color: white;
+  border-radius: 6px;
+}
+.offers .button:hover{
+  cursor: pointer;
+}
+
+.category h1{
+  text-align: center;
+  padding: 20px;
+  padding-top: 70px;
+ 
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #5e5c5c;
+  width: 80%;
+  margin: 10px auto;
+  }
+
+.icons{
+         
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  padding: 20px;
+}
+.icons .icon1{
+  margin: 5px;
+ 
+}
+
+.icons .icon1 h4{
+  text-align: center;
+}      
+.icons .icon1 :hover {
+color:#f1c40f;
+cursor:pointer;
+transform: scale(1.08);
+}
+ 
+.blogs {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+ 
+.blog1 {
+  flex: 1 1 calc(33.33% - 20px);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+ 
+.blog1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  padding: 15px;
+}
+ 
+.data {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+ 
+.data span {
+  margin-right: 15px;
+}
+ 
+.data i {
+  margin-right: 5px;
+  color: #999;
+}
+ 
+.caption p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.main-header .logo{
+  width:180px;
+  height:70px;
+  align-items: center;
+}
+
+
+footer {
+ 
+  padding: 20px 20px;
+}
+ 
+.footer1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+}
+ 
+.footer1 .column-1,
+.footer1 .column-2,
+.footer1 .column-3 {
+  flex: 1 1 30%;
+  min-width: 250px;
+}
+.footer1 .column-1{
+  padding: 30px;
+}
+.footer1 h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f1c40f;
+}
+ 
+.footer1 a {
+  color: #040404;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 0;
+}
+ 
+.footer1 a:hover {
+  color: #f1c40f;
+}
+ 
+.footer1 .column-2 {
+  text-align: center;
+}
+ 
+.footer1 .column-2 .logo {
+  width: 180px;
+  margin-bottom: 15px;
+}
+ 
+@media (max-width: 768px) {
+  .footer1 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer1 .column-1,
+  .footer1 .column-2,
+  .footer1 .column-3 {
+    flex: 1 1 100%;
+  }
+}
+ 
+.footer1 .column-3 .links {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+ 
+.footer1 .column-3 ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+ 
+.footer1 .column-3 ul li {
+  margin: 8px 0;
+}
+ 
+.footer1 .column-3 ul li a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+ 
+.footer1 .column-3 ul li a:hover {
+  color: #f1c40f;
+}
+@media (max-width: 768px) {
+  .footer1 .column-3 .links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+ 
+.theme{
+  text-align: center;
+
+}
+.headline{
+  display: flex;
+  gap: 40px;
+  padding-left: 140px;
+  padding-top: 20px;
+  background-color: rgb(206, 28, 28);
+  text-align: center;
+  padding-bottom: 20px;
+  margin-left: 90px;
+  margin-right: 100px;
+}
+
+.headline .shop{
+  padding-left: 130px;
+  color: #000;
+}
+
+
+/* Basic Reset */
+
+
+nav {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+}
+
+nav ul.menu > li {
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul.menu > li > a {
+  color: #333;
+  padding: 10px 5px;
+}
+
+nav ul.menu > li:hover > a,
+nav ul.menu > li.active > a {
+  color: orange;
+}
+
+/* Mega menu container */
+nav ul.menu > li.mega-menu:hover .mega-content {
+  display: flex;
+}
+
+/* Mega content box */
+.mega-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  width: 600px;
+  z-index: 1000;
+  gap: 40px;
+}
+
+/* Columns inside mega content */
+.mega-column {
+  flex: 1;
+}
+
+.mega-column h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.mega-column ul {
+  list-style: none;    
+}
+
+.mega-column ul li {
+  margin-bottom: 10px;
+}
+
+.mega-column ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: normal;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.mega-column ul li a:hover {
+  color: orange;
+}
+
+/* Right side image */
+.mega-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mega-image img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+
+
+ 
+
+
+</style>
+<body>
+
+<!-- Top Info Bar -->
+<div class="top-bar">
+<div class="left">Any Questions? <a href="mailto:contact@demo.com">contact@demo.com</a></div>
+<div class="right">
+<a href="#">Our app</a>
+<span>|</span>
+<a href="#">24 x 7 service</a>
+<span>|</span>
+<select>
+<option>$ US Dollar</option>
+<option>€ Euro</option>
+</select>
+<select>
+<option> English</option>
+<option> French</option>
+</select>
+<a href="#">My account</a>
+</div>
+</div>
+
+<!-- Header -->
+<header class="main-header">
+<div class="left">
+<i class="fas fa-bars"></i>
+<input type="text" placeholder="Search Products">
+<i class="fas fa-search"></i>
+</div>
+
+<div class="logo">
+<img src="https://demo.pocotheme.com/3/image/catalog/maza/svg/logo3.svg" alt="Cart Icon">
+</div>
+  
+<div class="icons">
+<i class="fas fa-random"></i>
+<i class="fas fa-heart"></i>
+<i class="fas fa-shopping-cart"></i> <span>Cart (0)</span>
+</div>
+
+
+</header>
+
+
+<nav>
+<ul class="menu">
+<li><a href="#">HOME</a></li>
+<li><a href="#">SPECIAL</a></li>
+<li><a href="#">PRODUCTS</a></li> 
+
+<li class="mega-menu">
+<a href="#">MEGA MENU ▼</a>
+<div class="mega-content">
+<div class="mega-column">
+<h3>Women's</h3>
+<ul>
+<li><a href="#">Sports Wear</a></li>
+<li><a href="#">Topwear</a></li>
+<li><a href="#">Sleepwear</a></li>
+<li><a href="#">Swimwear</a></li>
+<li><a href="#">Lingeries</a></li>
+<li><a href="#">Dress & Gown</a></li>
+<li><a href="#">Trousers & Capris</a></li>
+<li><a href="#">Tights & Legging</a></li>
+</ul>
+</div>
+
+<div class="mega-column">
+<h3>Men's</h3>
+<ul>
+<li><a href="#">Casual Shirts</a></li>
+<li><a href="#">Jeans</a></li>
+<li><a href="#">T Shirts & Polo</a></li>
+<li><a href="#">Track Pants</a></li>
+<li><a href="#">Footwear</a></li>
+<li><a href="#">Innerwear</a></li>
+<li><a href="#">Watches</a></li>
+<li><a href="#">Accessories</a></li>
+</ul>
+</div>
+
+<div class="mega-column">
+<h3>Kids's</h3>
+<ul>
+<li><a href="#">Clothing</a></li>
+<li><a href="#">Innerwear</a></li>
+<li><a href="#">Toys</a></li>
+<li><a href="#">Accessories</a></li>
+<li><a href="#">Baby Care</a></li>
+<li><a href="#">Footwear</a></li>
+<li><a href="#">Winter Wear</a></li>
+<li><a href="#">School Supplies</a></li>
+</ul>
+</div>
+
+<div class="mega-image">
+<img src="https://demo.pocotheme.com/image/cache/catalog/demo/women_1-300x300.jpg" alt="Clothing" />
+</div>
+</div>
+</li>
+
+<li><a href="#">BLOG</a></li>
+<li><a href="#">ADDONS</a></li>
+<li><a href="#">CONTACT US</a></li> 
+</ul>
+</nav>
+
+
+
+<div class="page1">
+<h3>FASHION WEEK</h3> <br>
+<h1>Women Fashion <br> Style Collection</h1><br>
+<h4>Women Jekets From Popular Brands</h4> <br>
+
+<button class="button">  SHOP NOW  </button>
+</div>
+
+<div class="page2">
+  <h1>Get 20% Off or Next day free shipping</h1>
+  <P>World Wide Offer Available</P>
+  <button class="button">  SHOP NOW  </button>
+
+</div>
+
+<div class="offers">
+<div class="bag">
+<p class="text"> Buy 1 Get 1 Free</p>
+<h1 class="text"> Women Bag</h1><br>
+<button class="button"> SHOP NOW</button>
+</div>
+<div class="men">
+<p class="text"> Upto 30% off</p>
+<h1 class="text"> Mens Fashion</h1><br>
+<button class="button"> SHOP NOW</button>
+</div>
+</div>
+
+
+
+<div class="category">
+<h1>SHOP BY CATEGORY</h1>
+<hr>
+<div class="icons">
+<div class="icon1">
+<img src="https://demo.pocotheme.com/3/image/cache/catalog/maza/demo/mz_poco/megastore-1/category2/3-100x100.webp" width="100" height="100" alt="Tops" > <br>
+<br><h4> Breifs</h4>
+</div>
+
+
+<div class="icon1">
+<img src="https://demo.pocotheme.com/3/image/cache/catalog/maza/demo/mz_poco/megastore-1/category2/5-100x100.webp" width="100" height="100" alt="FlipFlops"> <br>                        
+<br><h4> FlipFlops</h4>
+</div>
+
+
+<div class="icon1">
+<img src="https://demo.pocotheme.com/3/image/cache/catalog/maza/demo/mz_poco/megastore-1/category2/1-100x100.webp" width="100" height="100" alt="tops" ><br>
+<br><h4> Tops</h4>
+</div>
+
+
+<div class="icon1">
+<img src=" https://demo.pocotheme.com/3/image/cache/catalog/maza/demo/mz_poco/megastore-1/category2/4-100x101.webp" width="100" height="100" alt="shirts" ><br>
+<br> <h4> Shirts</h4>
+</div>
+
+
+<div class="icon1">
+<img src="https://demo.pocotheme.com/3/image/cache/catalog/maza/demo/mz_poco/megastore-1/category2/6-100x100.webp" width="100" height="100" alt="Hoodie"><br>
+<br><h4>Hoodie</h4>
+</div>
+
+
+<div class="icon1">
+<img src="https://demo.pocotheme.com/3/image/cache/catalog/maza/demo/mz_poco/megastore-1/category2/7-100x101.webp" width="100" height="100" alt="dresses"><br>
+<br><h4>Dresses</h4>
+</div> 
+</div>
+
+<div class="headline">
+<div class="h2">
+<h2>RIGHT TO FASHION SALE </h2>
+</div>
+
+<div class="strong">
+<strong> FLAT 60% OFF ON CLOTHING, FOOTWEAR, ACCESSORIES & MORE </strong>
+</div>
+
+<div class="shop">
+<a href="#">SHOP NOW</a>
+</div>
+</div>
+   
+
+
+<div class="blog">
+<h1>FROM THE BLOG</h1>
+<div class="blogs">
+<div class="blog1">
+<img src="https://demo.pocotheme.com/3/image/cache/catalog/maza/demo/mz_poco/megastore-1/blog/3-379x218.webp">
+ 
+<div class="caption">  
+<div class="data">
+<span class="author"><i class="icon fas fa-user-alt"></i><span>Jolio Balia</span> </span>
+<span class="comment"><i class="icon fas fa-comments"></i> 0 <span>comment</span> </span>
+<span class="viewed"><i class="icon fas fa-eye"></i> 1106</span>  
+</div>
+
+<p>Designed to be held in the hand, hung from the arm, or slung over the shoulder or body using a strap.</p>
+</div>
+</div>
+
+
+<div class="blog1">
+<img src="https://demo.pocotheme.com/3/image/cache/catalog/maza/demo/mz_poco/megastore-1/blog/7-379x218.webp">
+<div class="caption">
+<div class="data">
+<span class="author"><i class="icon fas fa-user-alt"></i><span>Jolio Munich</span> </span>
+<span class="comment"><i class="icon fas fa-comments"></i> 3 <span>comment</span> </span>
+<span class="viewed"><i class="icon fas fa-eye"></i> 2136</span>  
+</div>
+
+<p>Munich dedicate their creations entirely to the styles of the swinging Sixties.</p>
+</div>
+</div>
+
+
+<div class="blog1">
+<img src="https://demo.pocotheme.com/3/image/cache/catalog/maza/demo/mz_poco/megastore-1/blog/4-379x218.webp">
+<div class="caption">
+<div class="data">
+<span class="author"><i class="icon fas fa-user-alt"></i><span>Diana Richa</span> </span>
+<span class="comment"><i class="icon fas fa-comments"></i> 5 <span>comment</span> </span>
+<span class="viewed"><i class="icon fas fa-eye"></i> 2889</span>  
+</div>
+
+<p>Richa dedicate their creations entirely to the styles of the swinging Sixties.</p>
+</div>
+</div>
+</div> 
+</div>  <hr>
+
+<footer>
+
+<div class="footer1">
+<div class="column-1">
+<div class="email">
+<h4>Email Us</h4>
+<a href=""><i class="fas fa-envelope me-2 text-primary"></i>   demo@demo.com</a>
+</div><br><br>
+
+<div class="contact">
+<h4> Phone Number</h4>
+<a href=""><i class="fas fa-phone-alt me-2 text-primary"></i>  789-345-1230</a>
+</div>
+</div>
+
+<div class="column-2">
+<img src="https://demo.pocotheme.com/3/image/catalog/maza/svg/logo3.svg" alt="logo" class="logo">
+<br>
+<p>It is a long established fact that a reader will <br>be distracted 
+  by the readable content of a page when looking at its layout. <br>
+   The point of using Lorem Ipsum is that it has <br>
+    a more-or-less normal distribution of letters</p>
+                       
+</div>
+
+
+<div class="column-3">
+<div class="links">
+<ul>
+<li><a href="">My Orders</a></li>
+<li><a href="">Returns</a></li>
+<li><a href="">Support</a></li>
+<li><a href="">Tracking</a></li>
+<li><a href="">Wishlist</a></li>
+</ul>
+
+<ul>
+<li><a href="">About Us</a></li>
+<li><a href="">Blog</a></li>
+<li><a href="">Brands</a></li>
+<li><a href="">Testimonals</a></li>
+<li><a href="">Special</a></li>
+</ul>
+
+</div>
+</div>  <hr>
+
+
+<div class="theme">
+<p>2022@PocoTheme power by MazaEngine</p>
+</div>
+</footer>
+   
+</body>
+</html>   
+
